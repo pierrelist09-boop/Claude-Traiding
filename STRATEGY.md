@@ -4,6 +4,8 @@
 Entscheidung ableite. Sie enthält bewusst keine Einsatz- oder Prozentregeln: Einsatz, Hebel und Limits setzt der Bot (Autrionex
 `app/claude1`). Die Strategie liefert Richtung, Auslöser, Ungültigkeits-Niveau und Ziele als **Kurse aus dem Chart**.
 
+> **Stand der Simulation (Nacht 2026-11-06):** Bisher trägt nur die langsame Trendfolge E (`simulation/ergebnis.md`): über zwei Jahre auf 8 Coins +26 bis +47 %/Jahr bei 16 bis 30 % Rückgang (2 bis 4 % Risiko), in allen vier Halbjahren positiv. Die Chart-Lesart (Ereignisse) liefert Kontext, aber keinen nachgewiesenen eigenen Vorteil.
+>
 > **Ehrliche Beweislage (Stand 2026-11-06):** Kein einzelnes Chart-Signal und kein Zusammenspiel hat sich bisher statistisch
 > bestätigt (siehe `LEARNINGS.md`). Die Lesart beschreibt den Chart genau und nachvollziehbar, sie beweist keinen Vorteil.
 > Der einzige bisher gemessene Vorteil gehört zur langsamen Trendfolge (`docs/strategie_k_trendfolge.md`). Diese Datei wird nach

@@ -66,6 +66,22 @@ E und F sind deshalb **Kandidaten, kein Beweis**. (4) Der Chart-Trail (B) ist ni
 Konsequenz fürs Ziel: Bei Ø +0,06 bis +0,19 R pro Trade und rund 100 Trades im Jahr wächst ein Konto selbst mit hohem Einsatz langsam und mit großen Rückgängen. Ein Gewinn von +250 % ist so
 keine Frage von Stunden oder Tagen, sondern von Jahren und Glück, und das Ergebnis ist nicht garantiert.
 
+## 2026-11-06 (Nacht): Zwei-Jahres-Konto-Simulation (`research/simulation.py`, Bericht `simulation/ergebnis.md`, je Coin `coins/<COIN>/simulation.md`)
+
+Chronologisch ab 2024-11-06, Konto 1.000 $, 8 Coins, höchstens 4 Positionen, Kosten und Funding drin. **Langsame Trendfolge E** (Donchian 100, Stop 4 ATR, Trail 5 ATR, nur mit Tagestrend):
+2 % Risiko je Trade: 1.591 $ (+26 %/Jahr, Rückgang 16 %), 4 %: 2.143 $ (+47 %/Jahr, Rückgang 30 %), 6 %: 2.558 $ (Rückgang 40 %), 8 %: 3.136 $ (Rückgang 41 %). 112 Trades, 45 % Treffer.
+Beitrag je Coin bei 4 %: XRP +347 $, BTC +304 $, LINK +168 $, HYPE +160 $, ETH +141 $, AVAX +53 $, DOGE −9 $, SOL −21 $. Buy&Hold gleichgewichtet +50 % in zwei Jahren (Einzelcoins −68 % bis +480 %).
+E war in allen vier Halbjahren positiv (Ø R +0,17 / +0,24 / +0,11 / +0,50). Der Gewinn hängt an wenigen großen Trades (z. B. ein XRP-Long mit +6,8 R trägt 30 % des XRP-Beitrags): typisch Trendfolge.
+
+Verbesserungsrunden (alle auf denselben zwei Jahren, also optimistisch):
+1. Altes K (A): nur +15 %/Jahr bei 2 %. → langsamere Variante E übernommen.
+2. Walk-forward-Auswahl (alle 91 Tage beste Strategie aus abgeschlossenen Trades, mit Pause für Verlierer-Coins): 2.061 $ bei 2 %, aber 53 % Rückgang. Schlägt E nicht. Auswahl erzeugt Rauschen.
+3. Mehr Positionen (6/8) und mehr Coins (15): keine Verbesserung (Positionen laufen gleich), Rückgang steigt (15 Coins bei 4 %: 2.049 $ mit 45 % Rückgang).
+4. Höherer Einsatz: nicht stetig (8 % → 3.136 $, 10 % → 2.814 $). Mehr Risiko kauft mehr Rückgang, nicht proportional mehr Gewinn.
+5. Chart-Umkehr C1: schönes Endkonto (2.327 $ bei 1 %), aber instabil (nur 2 von 4 Halbjahren positiv, drei Coins tragen, XRP −465 $ und HYPE −374 $), 827 Trades mit 21 % Treffern, 39 bis 76 % Rückgang, Parameter mit Leck aus der Einzeloptimierung. Verworfen.
+
+Bewertung: E ist die belastbarste Basis (beständig, gleichmäßig, geringer Rückgang), aber 142 Trades tragen die Aussage nur schwach, und 2025 war eine starke Trendphase. **Das Ziel +2.500 $ Gewinn wäre in diesen zwei Jahren nur bei 8 bis 10 % Risiko je Trade (Rückgang ~40 %) nahe gewesen. Eine Wiederholung ist nicht garantiert.**
+
 ## Nächste Hypothesen (Reihenfolge nach Erfolgsaussicht)
 0. **Weniger Freiheitsgrade:** vorab begründete Regeln statt Gitter von 576 Sätzen; Walk-forward über mehrere Zeitfenster statt eines Splits.
 1. **Regime-Filter auf K** (Effizienzverhältnis/ADX): Trendfolge nur in Trendphasen, nicht in Seitwärtsphasen.

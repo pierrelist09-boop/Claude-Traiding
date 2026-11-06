@@ -111,7 +111,7 @@ def simulate(P, p):
         hours = (k - i) * HOURS[P.tf]
         gross = ((exit_px - entry) if long else (entry - exit_px)) / d
         cost = (FEE2 + (FUND_H * hours if long else -FUND_H * hours)) * entry / d
-        trades.append((S.t[i], gross - cost, hours, best[0]))
+        trades.append((S.t[i], gross - cost, hours, best[0], S.t[min(k, S.n - 1)], d / entry))
         busy = k
     return trades
 

@@ -22,6 +22,7 @@ Nur Standardbibliothek, keine Abhängigkeiten. Daten: öffentliche Hyperliquid-A
   `reader.py` (Lesart + Plan), `evidence.json` (Beweislage je Signal), `journal.py` (Forward-Journal).
 - `research/`: Eventstudie, Zusammenspiel, Forward-Check; Ergebnisse in `research/results/`.
 - `coins/`: ein Ordner je Coin (BTC ETH SOL XRP DOGE LINK AVAX HYPE) mit Steckbrief, Ergebnis, Plan; Übersicht in `coins/README.md`.
+- `simulation/`: Zwei-Jahres-Konto-Simulation (`ergebnis.md`, `trades_E_4pct.csv`); je Coin `coins/<COIN>/simulation.md`. Skripte `research/simulation.py`, `research/simulation_report.py`.
 - `docs/strategie_k_trendfolge.md`: die bisher einzige gemessene Strategie (4h-Trendfolge).
 - `journal/readings.jsonl`: gespeicherte Lesarten.
 

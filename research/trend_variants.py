@@ -88,7 +88,7 @@ def run(S4, SD, p):
         ex *= (1 - SLIP if long else 1 + SLIP)
         hours = (k - i) * 4
         r = ((ex - entry) if long else (entry - ex)) / d - (FEE2 + (FUND_H * hours if long else -FUND_H * hours)) * entry / d
-        out.append((S4.t[i], r))
+        out.append((S4.t[i], r, S4.t[min(k, S4.n - 1)], d / entry, side))
         i = k + 1
     return out
 
@@ -107,9 +107,9 @@ def main():
         allt = []
         for c, (s4, sd) in data_.items():
             allt += run(s4, sd, p)
-        cell = lambda tr: f"{sum(r for _, r in tr) / len(tr):+.2f}R n={len(tr):3d}" if tr else "–"
+        cell = lambda tr: f"{sum(x[1] for x in tr) / len(tr):+.2f}R n={len(tr):3d}" if tr else "–"
         w = [[x for x in allt if x[0] < cuts[0]], [x for x in allt if cuts[0] <= x[0] < cuts[1]], [x for x in allt if x[0] >= cuts[1]]]
-        pos = sum(1 for tr in w if tr and sum(r for _, r in tr) / len(tr) > 0)
+        pos = sum(1 for tr in w if tr and sum(x[1] for x in tr) / len(tr) > 0)
         print(f"{name:50} {cell(w[0]):>16} {cell(w[1]):>16} {cell(w[2]):>16} {cell(allt):>18}  {'<- in allen 3 Fenstern positiv' if pos == 3 else ''}")
 
 
