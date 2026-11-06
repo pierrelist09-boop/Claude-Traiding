@@ -38,6 +38,12 @@ Kandidat = 1,5, Info = 0; nur das Ereignis der letzten Kerze zählt voll, eine K
 - **Ausstieg** außer an Ziel/Ungültigkeit: Strukturwechsel gegen die Position auf 1h oder 4h (CHoCH), oder die Tendenz kippt auf neutral und die Position steht nicht im Gewinn.
 - Handelbarkeit zuerst: bei dünnem Orderbuch (wenige tausend Dollar Tiefe) handle ich die Coin nicht, weil Paper-Fills dort nicht echt sind.
 
+## 3b. Coin-spezifische Pläne
+
+Für jeden Coin gibt es einen Ordner in `coins/<COIN>/` mit Steckbrief (Schwankung, Gleichlauf, Trendneigung, Handelbarkeit), Optimierungsergebnis (Training/Validierung/Test),
+`plan.md` (Wenn-Dann-Regeln, Checkliste, aktuelle Lesart) und `params.json`. Stand der Einzeloptimierung: im Test Ø +0,016 R über alle Coins, also kein belastbarer Vorteil
+(siehe `coins/README.md`). Empfehlungen dort ('Paper-Test', 'nur beobachten', 'nicht handeln') gelten nur für kleine Paper-Experimente, bis das Forward-Journal etwas bestätigt.
+
 ## 4. Ereignisse (Definition in `chartreader/events.py`)
 
 `pullback_rejection`, `zone_rejection`, `bos`, `bos_volume`, `choch`, `sweep_reclaim`, `rsi_divergence`, `squeeze_break` (je Long/Short).

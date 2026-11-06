@@ -1,0 +1,74 @@
+{
+ "coin": "ETH",
+ "stand": "2026-11-06 22:57",
+ "verdict": "nur beobachten",
+ "bestanden": 16,
+ "getestet": 576,
+ "robustheit": 0.0,
+ "profil": {
+  "coin": "ETH",
+  "kerzen_1h": 4999,
+  "kerzen_4h": 4999,
+  "kerzen_1d": 2270,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.68,
+  "atr_pct_4h": 1.87,
+  "atr_pct_1d": 5.33,
+  "autokorr_4h": 0.017,
+  "trend_anteil_4h": 0.58,
+  "aufwaerts_4h": 0.31,
+  "abwaerts_4h": 0.27,
+  "zonen_respekt": 0.46,
+  "zonen_ablehnungen": 859,
+  "korrelation_btc_1h": 0.88,
+  "orderbuch_kaeufer_usd": 4688924,
+  "orderbuch_verkaeufer_usd": 1656197,
+  "spread_pct": 0.0045,
+  "funding_pro_stunde_pct": 0.00125,
+  "offenes_volumen_mio": 2191.9,
+  "tagesvolumen_mio": 744.3
+ },
+ "gewaehlt": {
+  "ebene": "4h",
+  "params": {
+   "ev_set": "reversal",
+   "T": 3.0,
+   "ev_w": 1.5,
+   "k": 0.25,
+   "stop_ref": "swing",
+   "exit": "flip"
+  },
+  "train": {
+   "n": 86,
+   "mean": 0.17711991611791075,
+   "win": 0.4069767441860465,
+   "pf": 1.3754048664870628,
+   "sum": 15.232312786140325,
+   "dd": 16.84076360074816
+  },
+  "val": {
+   "n": 36,
+   "mean": 0.49485571346439033,
+   "win": 0.4444444444444444,
+   "pf": 2.1017653738398323,
+   "sum": 17.814805684718053,
+   "dd": 9.4448337370085
+  },
+  "test": {
+   "n": 36,
+   "mean": -0.4125448374757176,
+   "win": 0.2777777777777778,
+   "pf": 0.24437112552766402,
+   "sum": -14.851614149125833,
+   "dd": 14.851614149125831
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 11,
+  "mean": -0.4259581414822757,
+  "win": 0.18181818181818182,
+  "pf": 0.28791018161754856,
+  "sum": -4.685539556305033,
+  "dd": 4.93438695227076
+ }
+}

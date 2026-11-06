@@ -31,7 +31,21 @@ liegen im Test unter dem Zufall (bos:short −1,52 %, t=−4,1: eher Gegenindika
 Kein Chart-Signal ist bestätigt. Die Struktur-Lesart ist solide gebaut und beschreibt den Chart, aber sie sagt die nächsten Kerzen nicht verlässlich voraus.
 Bestätigt ist nur die langsame Trendfolge (K), und auch die nur schwach.
 
+## 2026-11-06 (später): Vollständiger Strategie-Backtest und Einzeloptimierung je Coin
+
+Aufbau: `research/strategy_bt.py` (Einstieg am Ereignis, Stop = Ungültigkeits-Niveau aus dem Chart, Ausstieg Zone / Swing-Trail / Strukturwechsel, Einheit R),
+`research/optimize_coins.py` (576 Parametersätze je Coin über Einstiegsebene 1h/4h; Training 50 % / Validierung 25 % / Test 25 %). Ergebnisse in `coins/<COIN>/`.
+
+Ergebnis im ungesehenen Test (gewählter Satz je Coin): BTC −0,40 R (n=21), ETH −0,41 (36), SOL +0,10 (33), XRP −0,31 (26), DOGE +1,01 (30), LINK +0,13 (23),
+AVAX −0,31 (20), HYPE +0,21 (20). **Gesamt: 209 Trades, Ø +0,016 R, 4 von 8 Coins im Plus. Das ist praktisch null.** Robustheit der Auswahl (Anteil der bestandenen
+Sätze, die im Test positiv bleiben): 0 bis 62 %, bei 5 von 8 Coins unter 50 %. Der gemeinsame Satz für alle Coins ist im Test ebenfalls ohne Vorteil und mit wenigen Trades.
+
+Lehre: Einzeloptimierung aus vielen Parametern findet im Training und in der Validierung "Vorteile", die im Test verschwinden (typische Überanpassung). Der Test wurde jetzt
+gesehen und darf nicht mehr zum Feintuning dienen. Weitere Bestätigung nur mit neuen Daten (Forward-Journal) und mit weniger Freiheitsgraden (statt 576 Sätzen wenige, vorab begründete).
+Auffällig: Das Zonen-Verhalten ist bei den Coins kaum besser als Zufall (Zonen-Respekt um 46 bis 52 %, 50 % = Zufall); DOGE und LINK zeigen die höchste Trendfortsetzung nach Umkehr-Ereignissen.
+
 ## Nächste Hypothesen (Reihenfolge nach Erfolgsaussicht)
+0. **Weniger Freiheitsgrade:** vorab begründete Regeln statt Gitter von 576 Sätzen; Walk-forward über mehrere Zeitfenster statt eines Splits.
 1. **Regime-Filter auf K** (Effizienzverhältnis/ADX): Trendfolge nur in Trendphasen, nicht in Seitwärtsphasen.
 2. **Längere Zeitebenen für Ereignisse** (4h/1d) mit Haltedauer in Tagen: dort sind Kosten relativ klein.
 3. **Funding-Extreme als Gegenindikator** (Funding-Verlauf ist über die API abrufbar).

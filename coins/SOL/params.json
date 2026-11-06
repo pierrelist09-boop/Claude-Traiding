@@ -1,0 +1,74 @@
+{
+ "coin": "SOL",
+ "stand": "2026-11-06 22:57",
+ "verdict": "Paper-Test (klein)",
+ "bestanden": 20,
+ "getestet": 576,
+ "robustheit": 0.5,
+ "profil": {
+  "coin": "SOL",
+  "kerzen_1h": 4999,
+  "kerzen_4h": 4999,
+  "kerzen_1d": 2244,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.8,
+  "atr_pct_4h": 2.2,
+  "atr_pct_1d": 7.64,
+  "autokorr_4h": 0.013,
+  "trend_anteil_4h": 0.59,
+  "aufwaerts_4h": 0.31,
+  "abwaerts_4h": 0.28,
+  "zonen_respekt": 0.48,
+  "zonen_ablehnungen": 816,
+  "korrelation_btc_1h": 0.83,
+  "orderbuch_kaeufer_usd": 110398,
+  "orderbuch_verkaeufer_usd": 424932,
+  "spread_pct": 0.0011,
+  "funding_pro_stunde_pct": -0.00113,
+  "offenes_volumen_mio": 514.5,
+  "tagesvolumen_mio": 218.6
+ },
+ "gewaehlt": {
+  "ebene": "1h",
+  "params": {
+   "ev_set": "rejection",
+   "T": 6.0,
+   "ev_w": 1.5,
+   "k": 0.25,
+   "stop_ref": "bar",
+   "exit": "trail"
+  },
+  "train": {
+   "n": 45,
+   "mean": 0.4472799671408166,
+   "win": 0.2222222222222222,
+   "pf": 1.62333218832165,
+   "sum": 20.127598521336747,
+   "dd": 11.605843098124954
+  },
+  "val": {
+   "n": 28,
+   "mean": 0.146625819828292,
+   "win": 0.25,
+   "pf": 1.1916549693031078,
+   "sum": 4.105522955192177,
+   "dd": 9.69937608694588
+  },
+  "test": {
+   "n": 33,
+   "mean": 0.10113510953572726,
+   "win": 0.2727272727272727,
+   "pf": 1.1396835983614386,
+   "sum": 3.3374586146789995,
+   "dd": 13.522737970822373
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 16,
+  "mean": -0.04060756513246122,
+  "win": 0.1875,
+  "pf": 0.9117075614349021,
+  "sum": -0.6497210421193795,
+  "dd": 5.634631477145871
+ }
+}

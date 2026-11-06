@@ -1,0 +1,74 @@
+{
+ "coin": "LINK",
+ "stand": "2026-11-06 22:57",
+ "verdict": "Paper-Test (klein)",
+ "bestanden": 118,
+ "getestet": 576,
+ "robustheit": 0.62,
+ "profil": {
+  "coin": "LINK",
+  "kerzen_1h": 5000,
+  "kerzen_4h": 5000,
+  "kerzen_1d": 2267,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.87,
+  "atr_pct_4h": 2.32,
+  "atr_pct_1d": 7.03,
+  "autokorr_4h": 0.001,
+  "trend_anteil_4h": 0.61,
+  "aufwaerts_4h": 0.31,
+  "abwaerts_4h": 0.3,
+  "zonen_respekt": 0.46,
+  "zonen_ablehnungen": 784,
+  "korrelation_btc_1h": 0.76,
+  "orderbuch_kaeufer_usd": 168688,
+  "orderbuch_verkaeufer_usd": 120253,
+  "spread_pct": 0.0549,
+  "funding_pro_stunde_pct": 0.00125,
+  "offenes_volumen_mio": 53.2,
+  "tagesvolumen_mio": 8.2
+ },
+ "gewaehlt": {
+  "ebene": "4h",
+  "params": {
+   "ev_set": "all",
+   "T": 6.0,
+   "ev_w": 1.5,
+   "k": 0.75,
+   "stop_ref": "swing",
+   "exit": "trail"
+  },
+  "train": {
+   "n": 31,
+   "mean": 0.7366788005605006,
+   "win": 0.25806451612903225,
+   "pf": 2.9954829302132904,
+   "sum": 22.83704281737552,
+   "dd": 9.575260082733525
+  },
+  "val": {
+   "n": 20,
+   "mean": 0.8609148573247326,
+   "win": 0.3,
+   "pf": 3.178835947463296,
+   "sum": 17.218297146494653,
+   "dd": 5.0156217297753765
+  },
+  "test": {
+   "n": 23,
+   "mean": 0.1340918047702167,
+   "win": 0.2608695652173913,
+   "pf": 1.3233440531375467,
+   "sum": 3.084111509714984,
+   "dd": 5.208141763434036
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 4,
+  "mean": -0.3234535847952026,
+  "win": 0.5,
+  "pf": 0.43882080981787125,
+  "sum": -1.2938143391808103,
+  "dd": 1.2938143391808103
+ }
+}

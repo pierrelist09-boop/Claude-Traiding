@@ -1,0 +1,74 @@
+{
+ "coin": "XRP",
+ "stand": "2026-11-06 22:57",
+ "verdict": "nur beobachten",
+ "bestanden": 108,
+ "getestet": 576,
+ "robustheit": 0.5,
+ "profil": {
+  "coin": "XRP",
+  "kerzen_1h": 5000,
+  "kerzen_4h": 5000,
+  "kerzen_1d": 2237,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.73,
+  "atr_pct_4h": 1.92,
+  "atr_pct_1d": 6.1,
+  "autokorr_4h": 0.002,
+  "trend_anteil_4h": 0.57,
+  "aufwaerts_4h": 0.26,
+  "abwaerts_4h": 0.31,
+  "zonen_respekt": 0.5,
+  "zonen_ablehnungen": 817,
+  "korrelation_btc_1h": 0.76,
+  "orderbuch_kaeufer_usd": 1091581,
+  "orderbuch_verkaeufer_usd": 1049571,
+  "spread_pct": 0.0085,
+  "funding_pro_stunde_pct": 0.00037,
+  "offenes_volumen_mio": 204.1,
+  "tagesvolumen_mio": 66.9
+ },
+ "gewaehlt": {
+  "ebene": "4h",
+  "params": {
+   "ev_set": "structure",
+   "T": 3.0,
+   "ev_w": 3.0,
+   "k": 0.75,
+   "stop_ref": "bar",
+   "exit": "trail"
+  },
+  "train": {
+   "n": 56,
+   "mean": 0.3719517942385546,
+   "win": 0.375,
+   "pf": 1.7396727175407487,
+   "sum": 20.82930047735906,
+   "dd": 6.711005745115246
+  },
+  "val": {
+   "n": 30,
+   "mean": 0.35517937208417943,
+   "win": 0.3,
+   "pf": 1.7723756155133583,
+   "sum": 10.655381162525384,
+   "dd": 6.525596315444186
+  },
+  "test": {
+   "n": 26,
+   "mean": -0.3146724566542867,
+   "win": 0.23076923076923078,
+   "pf": 0.4313295878934559,
+   "sum": -8.181483873011455,
+   "dd": 8.580960774440474
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 2,
+  "mean": -1.419020934307796,
+  "win": 0.0,
+  "pf": 0.0,
+  "sum": -2.838041868615592,
+  "dd": 2.838041868615592
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "coin": "BTC",
+ "stand": "2026-11-06 22:57",
+ "verdict": "nur beobachten",
+ "bestanden": 41,
+ "getestet": 576,
+ "robustheit": 0.34,
+ "profil": {
+  "coin": "BTC",
+  "kerzen_1h": 4999,
+  "kerzen_4h": 4999,
+  "kerzen_1d": 2270,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.51,
+  "atr_pct_4h": 1.24,
+  "atr_pct_1d": 4.07,
+  "autokorr_4h": -0.016,
+  "trend_anteil_4h": 0.59,
+  "aufwaerts_4h": 0.31,
+  "abwaerts_4h": 0.28,
+  "zonen_respekt": 0.45,
+  "zonen_ablehnungen": 861,
+  "korrelation_btc_1h": 1.0,
+  "orderbuch_kaeufer_usd": 2167412,
+  "orderbuch_verkaeufer_usd": 929818,
+  "spread_pct": 0.0013,
+  "funding_pro_stunde_pct": 0.00125,
+  "offenes_volumen_mio": 3215.2,
+  "tagesvolumen_mio": 2935.4
+ },
+ "gewaehlt": {
+  "ebene": "1h",
+  "params": {
+   "ev_set": "all",
+   "T": 6.0,
+   "ev_w": 1.5,
+   "k": 0.75,
+   "stop_ref": "bar",
+   "exit": "flip"
+  },
+  "train": {
+   "n": 72,
+   "mean": 0.40825606031974426,
+   "win": 0.375,
+   "pf": 1.9183025020555164,
+   "sum": 29.394436343021585,
+   "dd": 8.382605084214319
+  },
+  "val": {
+   "n": 32,
+   "mean": 0.47836601394811135,
+   "win": 0.34375,
+   "pf": 1.9960729023059203,
+   "sum": 15.307712446339563,
+   "dd": 5.543345115698094
+  },
+  "test": {
+   "n": 21,
+   "mean": -0.40312353984233845,
+   "win": 0.38095238095238093,
+   "pf": 0.3218303206773271,
+   "sum": -8.465594336689108,
+   "dd": 8.465594336689106
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 4,
+  "mean": -0.45382594282712035,
+  "win": 0.25,
+  "pf": 0.24162259158784555,
+  "sum": -1.8153037713084814,
+  "dd": 1.8153037713084812
+ }
+}

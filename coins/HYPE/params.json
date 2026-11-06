@@ -1,0 +1,74 @@
+{
+ "coin": "HYPE",
+ "stand": "2026-11-06 22:58",
+ "verdict": "Paper-Test (klein)",
+ "bestanden": 95,
+ "getestet": 576,
+ "robustheit": 0.61,
+ "profil": {
+  "coin": "HYPE",
+  "kerzen_1h": 5000,
+  "kerzen_4h": 4209,
+  "kerzen_1d": 701,
+  "von": "2024-12-05",
+  "atr_pct_1h": 1.1,
+  "atr_pct_4h": 3.26,
+  "atr_pct_1d": 7.53,
+  "autokorr_4h": -0.057,
+  "trend_anteil_4h": 0.61,
+  "aufwaerts_4h": 0.3,
+  "abwaerts_4h": 0.31,
+  "zonen_respekt": 0.47,
+  "zonen_ablehnungen": 759,
+  "korrelation_btc_1h": 0.57,
+  "orderbuch_kaeufer_usd": 59890,
+  "orderbuch_verkaeufer_usd": 25913,
+  "spread_pct": 0.0013,
+  "funding_pro_stunde_pct": 0.00125,
+  "offenes_volumen_mio": 1754.1,
+  "tagesvolumen_mio": 406.5
+ },
+ "gewaehlt": {
+  "ebene": "1h",
+  "params": {
+   "ev_set": "structure",
+   "T": 6.0,
+   "ev_w": 3.0,
+   "k": 0.25,
+   "stop_ref": "bar",
+   "exit": "trail"
+  },
+  "train": {
+   "n": 40,
+   "mean": 0.41429836909285606,
+   "win": 0.375,
+   "pf": 1.7447344281366175,
+   "sum": 16.571934763714243,
+   "dd": 5.950096070724417
+  },
+  "val": {
+   "n": 27,
+   "mean": 0.9056368096907028,
+   "win": 0.25925925925925924,
+   "pf": 2.3710468510825815,
+   "sum": 24.452193861648976,
+   "dd": 7.641212903901698
+  },
+  "test": {
+   "n": 20,
+   "mean": 0.20661754011684086,
+   "win": 0.25,
+   "pf": 1.3310004116474357,
+   "sum": 4.132350802336817,
+   "dd": 5.05388684288008
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 12,
+  "mean": -0.16551870548021622,
+  "win": 0.4166666666666667,
+  "pf": 0.5147800113220914,
+  "sum": -1.9862244657625945,
+  "dd": 2.928208177605918
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "coin": "AVAX",
+ "stand": "2026-11-06 22:57",
+ "verdict": "nur beobachten",
+ "bestanden": 29,
+ "getestet": 576,
+ "robustheit": 0.17,
+ "profil": {
+  "coin": "AVAX",
+  "kerzen_1h": 4999,
+  "kerzen_4h": 4999,
+  "kerzen_1d": 2235,
+  "von": "2024-07-26",
+  "atr_pct_1h": 0.91,
+  "atr_pct_4h": 2.42,
+  "atr_pct_1d": 7.67,
+  "autokorr_4h": -0.02,
+  "trend_anteil_4h": 0.6,
+  "aufwaerts_4h": 0.31,
+  "abwaerts_4h": 0.29,
+  "zonen_respekt": 0.49,
+  "zonen_ablehnungen": 747,
+  "korrelation_btc_1h": 0.7,
+  "orderbuch_kaeufer_usd": 49623,
+  "orderbuch_verkaeufer_usd": 20952,
+  "spread_pct": 0.0071,
+  "funding_pro_stunde_pct": 0.00088,
+  "offenes_volumen_mio": 15.8,
+  "tagesvolumen_mio": 6.3
+ },
+ "gewaehlt": {
+  "ebene": "4h",
+  "params": {
+   "ev_set": "reversal",
+   "T": 4.5,
+   "ev_w": 1.5,
+   "k": 0.25,
+   "stop_ref": "swing",
+   "exit": "trail"
+  },
+  "train": {
+   "n": 42,
+   "mean": 0.22639853032917295,
+   "win": 0.2619047619047619,
+   "pf": 1.4006928742649822,
+   "sum": 9.508738273825264,
+   "dd": 5.514919505962727
+  },
+  "val": {
+   "n": 19,
+   "mean": 0.3246001598340218,
+   "win": 0.2631578947368421,
+   "pf": 1.5182842832663321,
+   "sum": 6.167403036846414,
+   "dd": 7.240412028932488
+  },
+  "test": {
+   "n": 20,
+   "mean": -0.3103617485801226,
+   "win": 0.2,
+   "pf": 0.4975239565217483,
+   "sum": -6.207234971602452,
+   "dd": 9.263614091001212
+  }
+ },
+ "gemeinsamer_satz_test": {
+  "n": 11,
+  "mean": -0.28982587003373583,
+  "win": 0.45454545454545453,
+  "pf": 0.3883276654286443,
+  "sum": -3.1880845703710943,
+  "dd": 3.1880845703710943
+ }
+}

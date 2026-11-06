@@ -12,6 +12,7 @@ python3 -m chartreader ZEC --json           # maschinenlesbar
 python3 research/event_study.py 1h 4h       # Wirkt jedes Chart-Signal? (Training/Test, Kosten)
 python3 research/confluence.py              # Zusammenspiel 1h + 4h
 python3 research/forward_check.py           # Was tat der Kurs nach meinen Lesarten?
+python3 research/optimize_coins.py [COIN]   # Strategie je Coin testen und optimieren, schreibt coins/<COIN>/
 python3 tests/test_chartreader.py           # Tests inkl. "kein Blick in die Zukunft"
 ```
 Nur Standardbibliothek, keine Abhängigkeiten. Daten: öffentliche Hyperliquid-API, kein Schlüssel.
@@ -20,6 +21,7 @@ Nur Standardbibliothek, keine Abhängigkeiten. Daten: öffentliche Hyperliquid-A
 - `chartreader/`: `series.py` (Indikatoren, bestätigte Swings), `structure.py` (Trend, Zonen), `events.py` (Chart-Ereignisse),
   `reader.py` (Lesart + Plan), `evidence.json` (Beweislage je Signal), `journal.py` (Forward-Journal).
 - `research/`: Eventstudie, Zusammenspiel, Forward-Check; Ergebnisse in `research/results/`.
+- `coins/`: ein Ordner je Coin (BTC ETH SOL XRP DOGE LINK AVAX HYPE) mit Steckbrief, Ergebnis, Plan; Übersicht in `coins/README.md`.
 - `docs/strategie_k_trendfolge.md`: die bisher einzige gemessene Strategie (4h-Trendfolge).
 - `journal/readings.jsonl`: gespeicherte Lesarten.
 
