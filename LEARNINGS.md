@@ -44,6 +44,28 @@ Lehre: Einzeloptimierung aus vielen Parametern findet im Training und in der Val
 gesehen und darf nicht mehr zum Feintuning dienen. Weitere Bestätigung nur mit neuen Daten (Forward-Journal) und mit weniger Freiheitsgraden (statt 576 Sätzen wenige, vorab begründete).
 Auffällig: Das Zonen-Verhalten ist bei den Coins kaum besser als Zufall (Zonen-Respekt um 46 bis 52 %, 50 % = Zufall); DOGE und LINK zeigen die höchste Trendfortsetzung nach Umkehr-Ereignissen.
 
+## 2026-11-06 (spät): Vorab festgelegte Varianten der 4h-Trendfolge, drei Zeitfenster (`research/trend_variants.py`)
+
+10 Coins (BTC ETH SOL XRP DOGE LINK AVAX NEAR UNI AAVE), 4h-Einstieg, Tagestrend-Filter, 8 vorab festgelegte Varianten, drei gleich lange Zeitfenster (2024-08 bis 2026-11), R netto nach Kosten:
+
+| Variante | Fenster 1 | Fenster 2 | Fenster 3 | gesamt |
+|---|---|---|---|---|
+| A Donchian55 + ATR-Trail 4 (bisheriges K) | −0,04 R (117) | +0,29 (120) | −0,11 (97) | **+0,06 R (334)** |
+| B Donchian55 + Swing-Trail (nur Chart) | −0,05 | +0,09 | −0,04 | +0,00 (379) |
+| C nur Tagestrend-Ausstieg | −0,28 | +0,22 | +0,06 | −0,01 (210) |
+| D A + Regime-Filter (Tages-Effizienz ≥ 0,25) | −0,06 | +0,17 | +0,71 | +0,18 (163) |
+| E Donchian100 + ATR-Trail 5 | +0,02 (71) | +0,27 (83) | +0,30 (53) | **+0,19 (207), in allen 3 Fenstern positiv** |
+| F A nur Long | +0,05 (68) | +0,17 (44) | +0,27 (17) | +0,12 (129), in allen 3 Fenstern positiv |
+| G A + Volumen ≥ 1,3 | −0,01 | +0,30 | −0,05 | +0,09 (297) |
+| H Donchian30 + ATR-Trail 4 | −0,01 | +0,22 | −0,15 | +0,03 (423) |
+
+Auswertung: (1) K (A) ist breit gemessen nur +0,06 R und instabil (Fenster 2 trägt alles). Die frühere Zahl (+0,10 R auf 7 Coins, Test PF 1,39) war optimistischer. (2) **Langsamer ist besser** (E, D):
+weniger Trades, Kosten fallen weniger ins Gewicht, die Aussage deckt sich mit der Theorie. (3) Mehrfachtest: Bei 8 Varianten × 3 Fenstern erwartet man zufällig etwa eine Variante, die in allen Fenstern positiv ist.
+E und F sind deshalb **Kandidaten, kein Beweis**. (4) Der Chart-Trail (B) ist nicht besser als der ATR-Trail.
+
+Konsequenz fürs Ziel: Bei Ø +0,06 bis +0,19 R pro Trade und rund 100 Trades im Jahr wächst ein Konto selbst mit hohem Einsatz langsam und mit großen Rückgängen. Ein Gewinn von +250 % ist so
+keine Frage von Stunden oder Tagen, sondern von Jahren und Glück, und das Ergebnis ist nicht garantiert.
+
 ## Nächste Hypothesen (Reihenfolge nach Erfolgsaussicht)
 0. **Weniger Freiheitsgrade:** vorab begründete Regeln statt Gitter von 576 Sätzen; Walk-forward über mehrere Zeitfenster statt eines Splits.
 1. **Regime-Filter auf K** (Effizienzverhältnis/ADX): Trendfolge nur in Trendphasen, nicht in Seitwärtsphasen.
