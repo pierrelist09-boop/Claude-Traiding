@@ -1,0 +1,82 @@
+{
+ "bos:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "bos:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "bos_volume:long": {
+  "confirmed": true,
+  "horizon": 24,
+  "edge": 0.00411
+ },
+ "bos_volume:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "choch:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "choch:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "pullback_rejection:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "pullback_rejection:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "rsi_divergence:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "rsi_divergence:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "squeeze_break:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "squeeze_break:short": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "sweep_reclaim:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "sweep_reclaim:short": {
+  "confirmed": true,
+  "horizon": 12,
+  "edge": 0.00083
+ },
+ "zone_rejection:long": {
+  "confirmed": false,
+  "horizon": null,
+  "edge": 0.0
+ },
+ "zone_rejection:short": {
+  "confirmed": true,
+  "horizon": 12,
+  "edge": 0.00086
+ }
+}

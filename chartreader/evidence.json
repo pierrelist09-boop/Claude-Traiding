@@ -1,0 +1,8 @@
+{
+  "_hinweis": "Beweislage je Signal, gepflegt aus research/ (siehe LEARNINGS.md). 'bestätigt' = in Training UND Test, auf mehreren Zeitebenen/Studien, t > 3. 'kandidat' = in einer Studie über dem Zufall, aber nicht gesichert. 'info' = kein Vorteil nachgewiesen, nur Beschreibung des Charts.",
+  "bos_volume:long": "kandidat", "choch:long": "kandidat", "rsi_divergence:long": "kandidat",
+  "squeeze_break:long": "kandidat", "sweep_reclaim:short": "kandidat", "bos_volume:short": "info",
+  "bos:long": "info", "bos:short": "info", "choch:short": "info", "pullback_rejection:long": "info",
+  "pullback_rejection:short": "info", "rsi_divergence:short": "info", "squeeze_break:short": "info",
+  "sweep_reclaim:long": "info", "zone_rejection:long": "info", "zone_rejection:short": "info"
+}
