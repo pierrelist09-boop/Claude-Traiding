@@ -93,6 +93,18 @@ Auftrag des Besitzers: schnellste Wege zu Geld in Krypto recherchieren, daraus e
 
 **Folgerung:** Kein schneller Ansatz hat Vorteil nach Kosten. Die besten Einzeltage lagen bei 13 bis 25 % (Ausreißer), nie bei 50 %. Kurze Haltedauer verliert an den Kosten, Gegenbewegungs-Handel an Trends. Weiter gilt: langsame Trendfolge E bleibt die einzige Basis mit (schwachem) Vorteil. Ehrlicher Vorbehalt: 1h-Daten umfassen nur ca. 208 Tage und ein Marktregime.
 
+## 2026-11-07 (später): Verbesserungsversuch mit dem Plugin trading-skills (`research/plugin_test.py`, Ergebnis `research/fast/ergebnis_plugin.md`)
+
+Plugin (agiprolabs/claude-trading-skills) gelesen: Standard-Quantmethoden (Walk-forward, Deflated Sharpe, Regime-Erkennung, Kelly, Ausstiegs- und Risikoregeln), die Skripte der gelesenen Skills enthalten keine Netz- oder Schadfunktionen, Hyperliquid kommt kaum vor (Schwerpunkt Solana). Eine Formel ist für unseren Zweck falsch angewendet: Das Deflated-Sharpe-Skript setzt die Streuung der Versuche = 1; bei Sharpe je Trade würde alles durchfallen, deshalb wurde mit der echten Streuung gerechnet.
+
+Acht vorab festgelegte Varianten der Trendfolge E, 10 Coins, 207 Trades, 8 Folds nach Zeit, Kosten wie überall:
+- **Keine Verbesserung bei Einstieg/Ausstieg.** Tages-ADX >= 20: −0,015 R; ADX >= 25: +0,029 R bei weniger Trades (166), Konfidenzintervall [−0,09; +0,15]; „Chaos“-Filter: +0,010 R [−0,011; +0,031]; Hurst: −0,021 R; Zeitstopp 5/10 Tage: −0,015/−0,002 R; gestaffelter Ausstieg (25 % bei 2 R, 25 % bei 4 R): −0,006 R. Alle Intervalle schließen 0 ein, E bleibt unverändert.
+- E selbst: Ø R +0,194, Deflated Sharpe 0,99 (aber die Varianten sind fast gleich und die Trades über Coins korreliert, der Wert ist also zu optimistisch).
+- **Einsatz:** Kelly (μ/σ² aus 142 Trades) = 12,7 % Risiko je Trade, 4 % ist rund 0,3 Kelly; das Plugin rät bei unter 100 bis 200 Trades zu 0,1 bis 0,25 Kelly. Laufend nachgerechnetes Kelly ist schlechter als feste Anteile (1/4 Kelly: 1.527 $, 27 % Rückgang gegen 2 % fix: 1.591 $, 16 %).
+- **Übernommen: höchstens 2 gleichzeitige Positionen (= 8 % offenes Risiko).** Gleiche Trade-Folge, 4 % je Trade: 4 Positionen 2.143 $ (+47 %/Jahr, Rückgang 30 %, Calmar 1,56); 3 Positionen 2.026 $ (24 %); **2 Positionen 1.969 $ (+41 %/Jahr, Rückgang 18 %, Calmar 2,22)**; Risikodeckel 8 % ebenso. Beide Jahreshälften mit niedrigerem Rückgang (26→16 %, 30→18 %), Endkonto in Jahr 1 niedriger, in Jahr 2 höher. Grund: Krypto-Coins laufen im Gleichschritt. Eine Stichprobe, ein Marktumfeld: Risiko-Reduktion, keine Gewinnsteigerung.
+
+**Fehler gefunden und behoben:** Ein Monte-Carlo-Skript hatte `data.candles(c, "1d", 900, use_cache=True)` aufgerufen und damit den Cache der Tageskerzen von 7 Coins auf 900 Tage gekürzt (EMA200 ohne Anlauf, frühe Trades fehlten, E sah schlechter aus: 1.506 $ statt 2.143 $). Cache neu geladen, die Basis reproduziert die alte Simulation exakt. Die Workflow-Backtests von heute früh nutzen keine Tageskerzen und sind nicht betroffen. **Regel: Cache-Aufrufe mit kleinem n nie mit `use_cache=True` (überschreibt die Datei).**
+
 ## Nächste Hypothesen (Reihenfolge nach Erfolgsaussicht)
 0. **Weniger Freiheitsgrade:** vorab begründete Regeln statt Gitter von 576 Sätzen; Walk-forward über mehrere Zeitfenster statt eines Splits.
 1. **Regime-Filter auf K** (Effizienzverhältnis/ADX): Trendfolge nur in Trendphasen, nicht in Seitwärtsphasen.
