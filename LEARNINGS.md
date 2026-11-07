@@ -82,6 +82,17 @@ Verbesserungsrunden (alle auf denselben zwei Jahren, also optimistisch):
 
 Bewertung: E ist die belastbarste Basis (beständig, gleichmäßig, geringer Rückgang), aber 142 Trades tragen die Aussage nur schwach, und 2025 war eine starke Trendphase. **Das Ziel +2.500 $ Gewinn wäre in diesen zwei Jahren nur bei 8 bis 10 % Risiko je Trade (Rückgang ~40 %) nahe gewesen. Eine Wiederholung ist nicht garantiert.**
 
+## 2026-11-07: Suche nach schnellen Wegen (`research/fast/`, je Ansatz `ergebnis_<name>.md`)
+
+Auftrag des Besitzers: schnellste Wege zu Geld in Krypto recherchieren, daraus eine Strategie bauen, an passenden Coins testen. Drei Blickwinkel, 76 Varianten, 11 Kandidaten, Training 50 % / Validierung 25 % / Test 25 % (Test je Kandidat genau einmal), Kosten 0,045 % + 0,02 bis 0,04 % Slippage je Seite, 2 % Risiko je Trade für die Renditeangabe.
+
+- **Ausbruch/Momentum** (Squeeze 4h, Eröffnungsspanne 1h): kein Vorteil. Squeeze: Training +0,15 R, Validierung −0,20 R, Test +0,03 R (−26 % bei 2 % Risiko). Eröffnungsspanne verliert in allen Abschnitten, die Kosten (0,09 R je Trade) fressen den Rest.
+- **Relative Stärke Long/Short 4h** (stärkste 3 Coins long, schwächste 3 short, 7 Tage Rückblick, 3 Tage Haltedauer): erfüllt formal die Hürden (Test +0,04 R, 10 von 12 Coins im Plus, +22 % in 7 Monaten bei 13 % Rückgang), ist aber **schwach**: Konfidenzintervall schließt 0 ein, im Training ≈ 0, und die 3 besten von 69 Rebalances liefern mehr als die gesamte Summe (17,4 von 17,0 R; ohne sie −0,001 R). Nur als Vorwärtstest ohne Parameteränderung weiterverfolgen.
+- **Funding/Mean Reversion** (Docht-Kapitulation, Überdehnung RSI(3), Funding-Prämie): kein Vorteil. Training oft positiv, Validierung stark negativ (−0,45 bis −0,79 R), typische Überanpassung. Gegen Trends zu handeln kostete bis −76 % (1h Überdehnung). Carry (Funding einsammeln) bringt nur etwa 0,02 % pro Tag.
+- **Volumen-Schub/Alts**: kein Vorteil (Kompressionsausbruch Training +0,26 R, Test −0,12 R, −48 %); der Fehlausbruch-Fade 1h hat nur 12 Test-Trades (nicht aussagekräftig).
+
+**Folgerung:** Kein schneller Ansatz hat Vorteil nach Kosten. Die besten Einzeltage lagen bei 13 bis 25 % (Ausreißer), nie bei 50 %. Kurze Haltedauer verliert an den Kosten, Gegenbewegungs-Handel an Trends. Weiter gilt: langsame Trendfolge E bleibt die einzige Basis mit (schwachem) Vorteil. Ehrlicher Vorbehalt: 1h-Daten umfassen nur ca. 208 Tage und ein Marktregime.
+
 ## Nächste Hypothesen (Reihenfolge nach Erfolgsaussicht)
 0. **Weniger Freiheitsgrade:** vorab begründete Regeln statt Gitter von 576 Sätzen; Walk-forward über mehrere Zeitfenster statt eines Splits.
 1. **Regime-Filter auf K** (Effizienzverhältnis/ADX): Trendfolge nur in Trendphasen, nicht in Seitwärtsphasen.
